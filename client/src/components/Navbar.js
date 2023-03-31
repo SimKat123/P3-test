@@ -52,7 +52,7 @@ export default class Navbar extends Component {
               Username
             </Menu.Item>
 
-            (
+            {Auth.loggedIn() ? (
               <>
                 <Menu.Item
                   name="logout"
@@ -63,7 +63,26 @@ export default class Navbar extends Component {
                   Logout
                 </Menu.Item>
               </>
-            )
+            ) : (
+              <>
+                <Menu.Item
+                  name="Login"
+                  href="/login"
+                  onClick={this.handleItemClick}
+                >
+                  <Icon name="sign out alternate" />
+                  Login
+                </Menu.Item>
+                <Menu.Item
+                  name="Signup"
+                  href="/signup"
+                  onClick={this.handleItemClick}
+                >
+                  <Icon name="sign out alternate" />
+                  Sign-up
+                </Menu.Item>
+              </>
+            )}
           </Container>
         </Menu>
         <Container style={{ marginTop: "6.5em" }}>
