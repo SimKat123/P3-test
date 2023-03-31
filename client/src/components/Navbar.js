@@ -114,18 +114,18 @@ export default class Navbar extends Component {
                   MLB
                 </Menu.Item>
                 <Menu.Item
-                  name="English Premire League"
+                  name="English Premier League"
                   as="h4"
-                  href="/engPremireLeague"
+                  href="/engPremierLeague"
                   inverted
                   color="teal"
-                  active={activeItem === "English Premire League"}
+                  active={activeItem === "English Premier League"}
                   onClick={
                     this.handleItemClick
                    }
                 >
                   <Icon name="futbol outline" />
-                  English Premire League
+                  English Premier League
                 </Menu.Item>
                 <Menu.Item
                   name="NBA"
